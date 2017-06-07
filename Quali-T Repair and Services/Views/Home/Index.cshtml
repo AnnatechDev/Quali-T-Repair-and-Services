@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="jumbotron">
+    <h2>Quali-<span class="t">T</span> Repairs & Services</h2>
+    <h4 id="tight"><small><i>Good Service makes the difference</i></small></h4>
+    @Html.Partial("_CarouselPartial")
+</div>  
+<div class="row">
+    <div class="col-md-4">
+        <h2>Laptops</h2>
+        <p>
+            We provide you with <span class="t"><i>quali-t</i></span> Laptops.
+        </p>
+        <div class="img-thumbnail-container">
+            <img class="img-thumbnail" src="~/Content/images/products/laptop-thumbnail.png" alt="Laptop Thumbnail" />
+        </div>
+        <p>
+            @Html.ActionLink(" View Laptops", "Index", "Laptop", null, new { @class = "btn btn-primary fa fa-laptop" })
+        </p>
+
+
+
+    </div>
+    <div class="col-md-4">
+        <h2>Desktops</h2>
+        <p>
+            We provide you with <span class="t"><i>quali-t</i></span> PCs.
+        </p>
+        <div class="img-thumbnail-container">
+            <img class="img-thumbnail" src="~/Content/images/products/pc-thumbnail.png" alt="PC Thumbnail" />
+        </div>
+        <p>
+            @Html.ActionLink(" View Desktops", "Index", "Desktop", null, new { @class = "btn btn-primary fa fa-desktop" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Tablets</h2>
+        <p>
+            We provide you with <span class="t"><i>quali-t</i></span> Tablets.
+        </p>
+        <div class="img-thumbnail-container">
+            <img class="img-thumbnail lg-img-thumbnails" src="~/Content/images/products/tablet.png" alt="Tablet Thumbnail" />
+        </div>
+        <p>
+            @Html.ActionLink(" View Tablets", "Index", "Tablet", null, new { @class = "btn btn-primary fa fa-tablet" })
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Smartphones</h2>
+        <p>
+            We provide you with <span class="t"><i>quali-t</i></span> Smartphones.
+        </p>
+        <div class="img-thumbnail-container">
+            <img class="img-thumbnail lg-img-thumbnails" src="~/Content/images/products/smartphones.png" alt="Smartphones Thumbnail" />
+        </div>
+
+        <p>
+            @Html.ActionLink(" View Smartphones", "Index", "Smartphones", null, new { @class = "btn btn-primary fa fa-mobile-phone" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Printers</h2>
+        <p>
+            We provide you with <span class="t"><i>quali-t</i></span> Printers.
+        </p>
+        <div class="img-thumbnail-container">
+            <img class="img-thumbnail lg-img-thumbnails" src="~/Content/images/products/printer.png" alt="Printer Thumbnail" />
+        </div>
+        <p>
+            @Html.ActionLink(" View Printers", "Index", "Printer", null, new { @class = "btn btn-primary fa fa-print" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Android Tv Box</h2>
+        <p>
+            We provide you with <span class="t"><i>quali-t</i></span> Android Tv Box.
+        </p>
+        <div class="img-thumbnail-container">
+            <img class="img-thumbnail lg-img-thumbnails" src="~/Content/images/products/android-box-thumbnail.png" alt="Android Tv Thumbnail" />
+        </div>
+        <p>
+            @Html.ActionLink(" View Tv Box", "Index", "TvBox", null, new { @class = "btn btn-primary fa fa-film" })
+        </p>
+    </div>
+</div>

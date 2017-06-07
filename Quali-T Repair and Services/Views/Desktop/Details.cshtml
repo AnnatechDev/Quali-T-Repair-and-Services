@@ -1,0 +1,106 @@
+﻿@model Quali_T_Repair_and_Services.Models.Desktops
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Desktops</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Processor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Processor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SystemType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SystemType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModelNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModelNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SerialNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateManufactured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateManufactured)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GraphicsCard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GraphicsCard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpticalDrive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpticalDrive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScreenResolution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScreenResolution)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,66 @@
+﻿
+<div id="my-carousel" class="carousel" data-ride="carousel">
+
+    <div id="car-indicator">
+        @* indicators dot nav *@
+        <ol class="carousel-indicators indicator-color">
+            <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#my-carousel" data-slide-to="1"></li>
+            <li data-target="#my-carousel" data-slide-to="2"></li>
+            <li data-target="#my-carousel" data-slide-to="3"></li>
+            <li data-target="#my-carousel" data-slide-to="4"></li>
+            <li data-target="#my-carousel" data-slide-to="5"></li>
+        </ol>
+    </div>
+
+    @*wrapper for slides*@
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active slide-container">
+            <img class="img-responsive slide-imgs" src="~/Content/images/carousel/1.png" alt="Laptop" />
+            <div class="carousel-caption">
+                <h4>Laptops</h4>
+            </div>
+        </div>
+        <div class="item slide-container">
+            <img class="img-responsive slide-imgs" src="~/Content/images/carousel/2.png" alt="PCs" />
+            <div class="carousel-caption">
+                <h4>Desktops</h4>
+            </div>
+        </div>
+        <div class="item slide-container">
+            <img class="img-responsive slide-imgs" src="~/Content/images/carousel/3.png" alt="Tablets" />
+            <div class="carousel-caption">
+                <h4>Tablets</h4>
+            </div>
+        </div>
+        <div class="item slide-container">
+            <img class="img-responsive slide-imgs" src="~/Content/images/carousel/4.png" alt="Smartphones" />
+            <div class="carousel-caption">
+                <h4>Smartphones</h4>
+            </div>
+        </div>
+        <div class="item slide-container">
+            <img class="img-responsive slide-imgs" src="~/Content/images/carousel/5.png" alt="Printer" />
+            <div class="carousel-caption">
+                <h4>Printers</h4>
+            </div>
+        </div>
+        <div class="item slide-container">
+            <img class="img-responsive slide-imgs" src="~/Content/images/carousel/14.png" alt="Android Box" />
+            <div class="carousel-caption">
+                <h4>Android Tv Box</h4>
+            </div>
+        </div>
+    </div>
+
+    @* slider controls next or previous *@
+    <a class="carousel-control left" href="#my-carousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left " aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control right" href="#my-carousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

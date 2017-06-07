@@ -1,0 +1,98 @@
+﻿@model Quali_T_Repair_and_Services.Models.Printers
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Printers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrintColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrintColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Processor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Processor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrintCatridges)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrintCatridges)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wireless)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wireless)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SystemRequirements)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SystemRequirements)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobilePrinting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobilePrinting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeofPrinter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeofPrinter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dimensions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dimensions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

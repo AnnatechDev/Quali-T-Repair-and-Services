@@ -1,0 +1,58 @@
+﻿@model Quali_T_Repair_and_Services.Models.Android_Tv_Boxes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Android_Tv_Boxes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OperatingSystem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OperatingSystem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hdmi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hdmi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModelNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModelNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

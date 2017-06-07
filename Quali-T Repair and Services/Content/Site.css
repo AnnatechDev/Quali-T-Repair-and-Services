@@ -1,0 +1,188 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.t{
+    color:#02c7fe;
+}
+
+#tight {
+    margin-top: -2%;
+
+}
+
+#logo-container{
+    width:100px;
+    height:100px;
+    padding:0%;
+    margin:-4% 0% 0% 0%;
+    /*background-color:#ffd800;*/
+    /*border:solid 2px #ff0000;*/
+}
+
+.logo{
+    max-height:50%;
+    max-width:50%;
+    margin:auto;
+    width:130%;
+    /*background-color:#b6ff00;*/
+}
+
+#logo-container a:hover{
+     border:none;
+     display:block;
+     position:relative;
+     background-color:transparent;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/*carousel images*/
+
+.slide-container{
+    width:300px;
+    height:300px;
+    margin:5% auto -6% auto;
+    padding:0;
+}
+
+.carousel-caption{
+    margin-top:10%;
+    color:#0094ff;
+}
+#my-carousel .carousel-control{display:none}
+#my-carousel:hover .carousel-control{display:block}
+
+.slide-imgs{
+    width:100%;
+    padding:0%;
+    margin:5% auto 0 auto;
+    height:100px;
+}
+
+.indicator-color li{
+    background-color:#0094ff;
+
+}
+
+#car-indicator{
+    margin-top:1%;
+}
+/**Thumbnails*/
+.img-thumbnail-container{
+    width:300px;
+    height:auto;
+    padding:10px;
+}
+
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.clr {
+	clear:both;
+	padding:0;
+	margin:0;
+	width:100%;
+	font-size:0;
+	line-height:0;
+}
+
+
+
+/* Footer section--------------- */
+/*.footer {
+    background-color:#1da0d7;
+    font-family:'Gill Sans';
+    font-weight:lighter;
+    font-size:smaller;
+}
+.footer_resize {
+
+	margin:0 auto;
+	padding:12px 24px;
+	width:922px;
+}
+.footer p {
+	margin:0;
+	padding:4px 0;
+	line-height:normal;
+
+}
+.footer a {
+	color:#ffffff;
+	padding:inherit;
+	text-decoration:none;
+}
+.footer a:hover {
+	text-decoration:none;
+}*/
+
+/*.footer .lf {
+	float:left;
+
+}
+.footer .rf {
+	float:right;
+
+}*/
+
+#footerSection {
+    background: #202020;
+    font-family:'Gill Sans';
+    font-weight:lighter;
+    font-size:smaller;
+    color: white;
+    padding: 20px 0 10px 0px;
+    margin: 20px 0px -2% 0px;
+    border-top: 1px solid #444;
+}
+
+#reserved{
+    margin:-3% 0 0 0;
+    /*background-color:#02c7fe;*/
+}
+    #footerSection a {
+        color: #ccc;
+        font-size: 11px;
+        padding: 0;
+        line-height: 24px;
+        display: block;
+    }
+
+        #footerSection a:hover {
+            color: #fff;
+        }
+
+    #footerSection #socialMedia a {
+        min-width: 25px;
+        display: inline;
+        margin-right: 6px;
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+#socialMedia img {
+    max-width: 60px;
+}
+
+#footerSection #socialMedia a:hover {
+    background: none;
+}
+/* ===================================================== */
