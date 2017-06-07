@@ -29,7 +29,7 @@ namespace Quali_T_Repair_and_Services
                       "~/Content/site.css",
                       "~/Content/css/font-awesome.css",
                       "~/Content/css/font-awesome.min.css",
-                      "~/Content/css/endless.min.css",
+                      //"~/Content/css/endless.min.css",
                       "~/Content/css/endless-skin.css",
                       "~/Content/css/pace.css",
                       "~/Content/css/fullcalendar.css",

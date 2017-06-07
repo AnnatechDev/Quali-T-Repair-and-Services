@@ -66,14 +66,6 @@ namespace Quali_T_Repair_and_Services.Models
     {
 
         [Required]
-        [Display(Name = "First Name")]
-        public string Firstname { get; set; }
-
-        [Required]
-        [Display(Name = "Last Name")]
-        public string Lastname { get; set; }
-
-        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

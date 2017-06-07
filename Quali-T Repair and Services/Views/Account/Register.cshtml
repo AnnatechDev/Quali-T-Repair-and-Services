@@ -1,4 +1,4 @@
-﻿@model Quali_T_Repair_and_Services.Models.RegisterViewModel
+﻿@model Quali_T_Repair_and_Services.Models.Customer
 @{
     ViewBag.Title = "Register";
 }
@@ -7,102 +7,89 @@
 <div class="jumbotron">
     <h2>Quali-<span class="t">T</span> Repairs & Services</h2>
     <h4 id="tight"><small><i>Good Service makes the difference</i></small></h4>
-  
+
 
 
 </div>
 
-
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
+<div class="col-md-12" style="background-color:#ffd800;">
     <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Create a new account.</h4>
-        </div>
-    </div>
-    <hr />
-    <div class="panel-tab">
-        <ul class="wizard-steps" id="wizardTab">
-            <li class="active">
-                <a href="GeneralInfo" data-toggle="tab">General Information</a>
-            </li>
-            <li>
-                <a href="ContactInfo" data-toggle="tab">Contact Information</a>
-            </li>
-            <li>
-                <a href="BillingDeliveryInfo" data-toggle="tab">Billing and Delivery Information</a>
-            </li>
-        </ul>
-    </div>
-    <div class="panel-body">
-        <div class="tab-content">
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="panel-heading">
+                <h4>Create a New Account</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6"> 
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Firstname, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(m => m.Firstname, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Lastname, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(m => m.Lastname, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.MobileNumber, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(m => m.MobileNumber, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.MobileNumber, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(m => m.MobileNumber, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        </div>
+
+            @*@Html.ValidationSummary("", new { @class = "text-danger" })*@
+
+          
+            
+
+        }
     </div>
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-   
-}
+</div>
+
+
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-<script type="text/javascript">
-		$(function	()	{
-			var currentStep = 1;
-
-			$('#wizardTab li a').click(function()	{
-				return false;
-			});
-
-			$('#nextStep').click(function()	{
-
-				currentStep++;
-
-				if(currentStep == 2)	{
-					$('#wizardTab li:eq(1) a').tab('show');
-					$('#wizardProgress').css("width","66%");
-
-					$('#prevStep').attr('disabled',false);
-					$('#prevStep').removeClass('disabled');
-				}
-				else if(currentStep == 3)	{
-					$('#wizardTab li:eq(2) a').tab('show');
-					$('#wizardProgress').css("width","100%");
-
-					$('#nextStep').attr('disabled',true);
-					$('#nextStep').addClass('disabled');
-				}
-
-				return false;
-			});
-
-			$('#prevStep').click(function()	{
-
-				currentStep--;
-
-				if(currentStep == 1)	{
-
-					$('#wizardTab li:eq(0) a').tab('show');
-					$('#wizardProgress').css("width","66%");
-
-					$('#prevStep').attr('disabled',true);
-					$('#prevStep').addClass('disabled');
-
-					$('#wizardProgress').css("width","33%");
-				}
-				else if(currentStep == 2)	{
-
-					$('#wizardTab li:eq(1) a').tab('show');
-					$('#wizardProgress').css("width","66%");
-
-					$('#nextStep').attr('disabled',false);
-					$('#nextStep').removeClass('disabled');
-
-					$('#wizardProgress').css("width","66%");
-				}
-
-				return false;
-			});
-		});
-</script>
