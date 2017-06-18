@@ -41,5 +41,9 @@ namespace Quali_T_Repair_and_Services.Models
         public DbSet<Printers> Printers { get; set; }
 
         public DbSet<TvBox> Android_Tv_Boxes { get; set; }
+
+        public DbSet<Customer> Customer { get; set; }
+
+        public DbSet<CustomerType> CustomerType { get; set; }
     }
 }

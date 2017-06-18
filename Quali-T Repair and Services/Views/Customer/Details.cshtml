@@ -1,0 +1,116 @@
+﻿@model Quali_T_Repair_and_Services.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="jumbotron">
+    <h2>Quali-<span class="t">T</span> Repairs & Services</h2>
+    <h4 id="tight"><small><i>Good Service makes the difference</i></small></h4>
+</div>
+<div>
+    
+    @if (Session["UserId"] != null)
+    {
+        <h2>
+            Welcome
+            <span><small>@Session["Username"].ToString()</small></span>
+        </h2>
+    }
+    <hr />
+</div>
+<div class="col-lg-12">
+    <div class="panel panel-default forms">
+        @using (Html.BeginForm("Create", "Customer", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="panel-heading">
+                <h4>Your Account</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Firstname, htmlAttributes: new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Firstname, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Lastname, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Lastname, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MobileNumber, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DateOfBirth, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.DateOfBirth, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BillingAddress, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.BillingAddress, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CustomerTypeId, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @*@Html.DropDownListFor(model => model.CustomerType.Name, new SelectList("CustomerTypeIds", "Name"),"-- Select Customer Type --",  new { @class = "form-control" })*@
+                                @Html.EditorFor(model => model.CustomerType.Name, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+    </div>
+</div>

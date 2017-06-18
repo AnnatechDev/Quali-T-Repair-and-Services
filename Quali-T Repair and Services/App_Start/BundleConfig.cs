@@ -21,6 +21,8 @@ namespace Quali_T_Repair_and_Services
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap-datepicker.min.js",
+                      "~/Scripts/bootstrap-timepicker.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

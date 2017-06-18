@@ -103,54 +103,37 @@ textarea {
 	font-size:0;
 	line-height:0;
 }
-
-
-
-/* Footer section--------------- */
-/*.footer {
-    background-color:#1da0d7;
-    font-family:'Gill Sans';
-    font-weight:lighter;
-    font-size:smaller;
+/***Register Form*/
+.forms{
+    background: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #777777;
+    border-color: #f1f5fc;
+    /*border-color: #80c641;*/
 }
-.footer_resize {
 
-	margin:0 auto;
-	padding:12px 24px;
-	width:922px;
+.forms input{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
 }
-.footer p {
-	margin:0;
-	padding:4px 0;
-	line-height:normal;
 
+.input-validation-error{
+    border: 2px solid #f00;
 }
-.footer a {
-	color:#ffffff;
-	padding:inherit;
-	text-decoration:none;
-}
-.footer a:hover {
-	text-decoration:none;
-}*/
 
-/*.footer .lf {
-	float:left;
-
-}
-.footer .rf {
-	float:right;
-
-}*/
+/*Footer section*/
 
 #footerSection {
+    position:absolute;
     background: #202020;
     font-family:'Gill Sans';
     font-weight:lighter;
     font-size:smaller;
     color: white;
+    width:100%;
     padding: 20px 0 10px 0px;
-    margin: 20px 0px -2% 0px;
+    margin: auto 0px -2% 0px;
     border-top: 1px solid #444;
 }
 

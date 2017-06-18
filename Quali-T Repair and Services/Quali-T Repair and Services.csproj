@@ -196,7 +196,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\TvBoxController.cs" />
     <Compile Include="Controllers\DesktopController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -208,13 +208,50 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706061744502_InitialModel.cs" />
-    <Compile Include="Migrations\201706061744502_InitialModel.Designer.cs">
-      <DependentUpon>201706061744502_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201706152030517_NewDatabase.cs" />
+    <Compile Include="Migrations\201706152030517_NewDatabase.Designer.cs">
+      <DependentUpon>201706152030517_NewDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706152038580_NewDatabase1.cs" />
+    <Compile Include="Migrations\201706152038580_NewDatabase1.Designer.cs">
+      <DependentUpon>201706152038580_NewDatabase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706152049214_NewDatabase2.cs" />
+    <Compile Include="Migrations\201706152049214_NewDatabase2.Designer.cs">
+      <DependentUpon>201706152049214_NewDatabase2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706160328416_InsertCustomers.cs" />
+    <Compile Include="Migrations\201706160328416_InsertCustomers.Designer.cs">
+      <DependentUpon>201706160328416_InsertCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706160518179_NewCustomer.cs" />
+    <Compile Include="Migrations\201706160518179_NewCustomer.Designer.cs">
+      <DependentUpon>201706160518179_NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706160555065_NewCustomer1.cs" />
+    <Compile Include="Migrations\201706160555065_NewCustomer1.Designer.cs">
+      <DependentUpon>201706160555065_NewCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171516038_MemberSinceDate.cs" />
+    <Compile Include="Migrations\201706171516038_MemberSinceDate.Designer.cs">
+      <DependentUpon>201706171516038_MemberSinceDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171551221_MemberSinceDate1.cs" />
+    <Compile Include="Migrations\201706171551221_MemberSinceDate1.Designer.cs">
+      <DependentUpon>201706171551221_MemberSinceDate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171617315_MemberDateTime.cs" />
+    <Compile Include="Migrations\201706171617315_MemberDateTime.Designer.cs">
+      <DependentUpon>201706171617315_MemberDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171917253_MemberSinceDate2.cs" />
+    <Compile Include="Migrations\201706171917253_MemberSinceDate2.Designer.cs">
+      <DependentUpon>201706171917253_MemberSinceDate2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerType.cs" />
     <Compile Include="Models\TvBox.cs" />
     <Compile Include="Models\Desktops.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -225,8 +262,67 @@
     <Compile Include="Models\Tablets.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ItemImages\Android Tv Box\1.png" />
+    <Content Include="App_Data\ItemImages\Android Tv Box\10.png" />
+    <Content Include="App_Data\ItemImages\Android Tv Box\2.png" />
+    <Content Include="App_Data\ItemImages\Android Tv Box\3.png" />
+    <Content Include="App_Data\ItemImages\Android Tv Box\4.png" />
+    <Content Include="App_Data\ItemImages\Android Tv Box\5.png" />
+    <Content Include="App_Data\ItemImages\Android Tv Box\6.png" />
+    <Content Include="App_Data\ItemImages\Android Tv Box\7.png" />
+    <Content Include="App_Data\ItemImages\Android Tv Box\8.png" />
+    <Content Include="App_Data\ItemImages\Desktops\acer_1.png" />
+    <Content Include="App_Data\ItemImages\Desktops\alienware_1.png" />
+    <Content Include="App_Data\ItemImages\Desktops\asus_1.png" />
+    <Content Include="App_Data\ItemImages\Desktops\asus_2.png" />
+    <Content Include="App_Data\ItemImages\Desktops\dellD_1.jpg" />
+    <Content Include="App_Data\ItemImages\Desktops\dell_2.png" />
+    <Content Include="App_Data\ItemImages\Desktops\hp_1.png" />
+    <Content Include="App_Data\ItemImages\Desktops\iMac_1.png" />
+    <Content Include="App_Data\ItemImages\Laptops\acer_1.png" />
+    <Content Include="App_Data\ItemImages\Laptops\acer_2.png" />
+    <Content Include="App_Data\ItemImages\Laptops\alienware_1.png" />
+    <Content Include="App_Data\ItemImages\Laptops\asus_1.png" />
+    <Content Include="App_Data\ItemImages\Laptops\dell_1.png" />
+    <Content Include="App_Data\ItemImages\Laptops\hp_1.png" />
+    <Content Include="App_Data\ItemImages\Laptops\hp_2.png" />
+    <Content Include="App_Data\ItemImages\Laptops\samsung_1.png" />
+    <Content Include="App_Data\ItemImages\Laptops\sony_1.png" />
+    <Content Include="App_Data\ItemImages\Laptops\toshiba_1.png" />
+    <Content Include="App_Data\ItemImages\Printers\1.png" />
+    <Content Include="App_Data\ItemImages\Printers\10.png" />
+    <Content Include="App_Data\ItemImages\Printers\2.png" />
+    <Content Include="App_Data\ItemImages\Printers\3.png" />
+    <Content Include="App_Data\ItemImages\Printers\4.png" />
+    <Content Include="App_Data\ItemImages\Printers\5.png" />
+    <Content Include="App_Data\ItemImages\Printers\6.png" />
+    <Content Include="App_Data\ItemImages\Printers\7.png" />
+    <Content Include="App_Data\ItemImages\Printers\8.png" />
+    <Content Include="App_Data\ItemImages\Printers\9.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\1.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\10.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\2.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\3.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\4.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\5.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\6.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\7.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\8.png" />
+    <Content Include="App_Data\ItemImages\Smartphones\9.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_1.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_10.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_2.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_3.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_4.jpg" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_4.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_5.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_6.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_7.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_8.png" />
+    <Content Include="App_Data\ItemImages\Tablets\tablet_9.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap-timepicker.css" />
@@ -378,6 +474,8 @@
     <Content Include="Content\scss\_stacked.scss" />
     <Content Include="Content\scss\_variables.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap-timepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\endless.js" />
@@ -461,11 +559,15 @@
     <Content Include="Views\Printer\Edit.cshtml" />
     <Content Include="Views\Printer\Index.cshtml" />
     <Content Include="Views\Home\_CarouselPartial.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Customer\Delete.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Login.cshtml" />
+    <Content Include="Views\Customer\_ExternalLoginsListPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -475,8 +577,35 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706061744502_InitialModel.resx">
-      <DependentUpon>201706061744502_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706152030517_NewDatabase.resx">
+      <DependentUpon>201706152030517_NewDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706152038580_NewDatabase1.resx">
+      <DependentUpon>201706152038580_NewDatabase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706152049214_NewDatabase2.resx">
+      <DependentUpon>201706152049214_NewDatabase2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706160328416_InsertCustomers.resx">
+      <DependentUpon>201706160328416_InsertCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706160518179_NewCustomer.resx">
+      <DependentUpon>201706160518179_NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706160555065_NewCustomer1.resx">
+      <DependentUpon>201706160555065_NewCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171516038_MemberSinceDate.resx">
+      <DependentUpon>201706171516038_MemberSinceDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171551221_MemberSinceDate1.resx">
+      <DependentUpon>201706171551221_MemberSinceDate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171617315_MemberDateTime.resx">
+      <DependentUpon>201706171617315_MemberDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171917253_MemberSinceDate2.resx">
+      <DependentUpon>201706171917253_MemberSinceDate2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

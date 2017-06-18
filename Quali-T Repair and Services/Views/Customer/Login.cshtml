@@ -1,0 +1,80 @@
+﻿@model Quali_T_Repair_and_Services.ViewModels.LoginViewModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+<div class="jumbotron">
+    <h2>Quali-<span class="t">T</span> Repairs & Services</h2>
+    <h4 id="tight"><small><i>Good Service makes the difference</i></small></h4>
+</div>
+<div class="col-lg-12">
+    <div class="panel panel-default forms">
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Customer", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-heading">
+                                <h4>Log in to your account</h4>
+                                <hr />
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Email, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Password, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <div class="checkbox">
+                                        @Html.CheckBoxFor(model => model.RememberMe)
+                                        @Html.LabelFor(model => model.RememberMe)
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-7 col-md-2">
+                                    <input type="submit" value="Log in" class="btn btn-success" />
+                                </div>
+                               
+                            </div>
+                            <p>
+                                @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                            </p>
+                            <p>
+                                @Html.ActionLink("Register as a new user", "Register")
+                            </p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <section id="socialLoginForm">
+                                @Html.Partial("_ExternalLoginsListPartial")
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+                   
+            }
+        </section>
+    </div>
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

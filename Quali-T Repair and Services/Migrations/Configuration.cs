@@ -4,6 +4,7 @@ namespace Quali_T_Repair_and_Services.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Data.SqlClient;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Quali_T_Repair_and_Services.Models.ApplicationDbContext>
     {
